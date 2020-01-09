@@ -1,3 +1,12 @@
+# Writing clean code
+
+- links to external articles:
+* https://thoughtbot.com/blog/back-to-basics-solid
+* https://medium.com/launch-school/the-basics-of-oop-ruby-26eaa97d2e98
+https://blog.alexdevero.com/6-simple-tips-writing-clean-code/
+https://medium.com/mindorks/how-to-write-clean-code-lessons-learnt-from-the-clean-code-robert-c-martin-9ffc7aef870c
+
+
 We strive to write code that conforms to the four rules for developers by [Sandi Metz](http://www.sandimetz.com/):
 
 1. Classes can be no longer than one hundred lines of code.
@@ -27,4 +36,12 @@ class Order
 end
 ```
 
-* Avoid writing local variables—most local variables are better as extracted methods.
+* Avoid writing local variables — most local variables are better as extracted methods.
+
+# Maintaining clean code
+
+Once in a while, you'll face the challenge of adding a feature to a legacy project. Please follow these rules:
+
+* Follow the **Boy Scout Rule** — always leave the code behind in a better state than you found it. If you're working with a legacy codebase, try to leave the code you're touching in a better state by not doing hacks, but rather adapting the code to conform to the new feature requirements. Thinking you'll do the refactoring later is wrong because that never happens.
+* There is an exception to the previous rule. Don't refactor untested code that works — you'll probably break it. The best way would be to test the code that you're working with, and then refactor it. If it is not possible to write tests for the part of the legacy code you're working with, just use the code as is.
+
